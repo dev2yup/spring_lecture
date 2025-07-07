@@ -8,7 +8,7 @@ import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
-import hello.core.order.OrderServiveImpl;
+import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -25,7 +25,7 @@ public class AppConfig { // 생성자를 통해 구현 객체 주입 DIP 만족
     }
     @Bean
     public OrderService orderService() {
-        return new OrderServiveImpl(memberRepository(), discountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
     @Bean
     public DiscountPolicy discountPolicy() {

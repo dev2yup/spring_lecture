@@ -52,7 +52,7 @@ public class SingletonTest {
         MemberService memberService1 = ac.getBean("memberService", MemberService.class);
         MemberService memberService2 = ac.getBean("memberService", MemberService.class);
 
-        // 참조값이 다른 것을 확인 (요청이 올 때마다 다른 객체가 생성됨)
+        // 참조값이 같은 것을 확인 (요청이 올 때마다 같은 객체가 반환됨)
         System.out.println("memberService1 = " + memberService1);
         System.out.println("memberService2 = " + memberService2);
 
